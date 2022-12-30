@@ -73,7 +73,7 @@ class StreamUtilsTest {
         String json = TriRpcStatus.decodeMessage(jsonRaw);
         System.out.println(jsonRaw + "---" + json);
         Map<String, String> upperMap = JsonUtils.getJson().toJavaObject(json, Map.class);
-        Assertions.assertArrayEquals("Upper".getBytes(StandardCharsets.UTF_8), upperMap.get("upper").getBytes(StandardCharsets.UTF_8));
+        Assertions.assertArrayEquals("upper".getBytes(StandardCharsets.UTF_8), upperMap.get("Upper").getBytes(StandardCharsets.UTF_8));
 
         int count = 10000;
         CountDownLatch latch = new CountDownLatch(count);
